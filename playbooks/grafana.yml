@@ -1,0 +1,9 @@
+---
+- name: Instalador Prometheus
+  user:
+    name: prometheus
+    uid: 800
+    group: prometheus
+    shell: /bin/false
+    system: yes
+    createhome: no
