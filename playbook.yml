@@ -1,0 +1,24 @@
+---
+- name: Node Exporter tasks
+  hosts: node_exporter
+  gather_facts: false
+  become: true
+
+  roles:
+    - node_exporter
+
+- name: Prometheus tasks
+  hosts: prometheus
+  gather_facts: false
+  become: true
+
+  roles:
+    - prometheus
+
+- name: Grafana
+  hosts: grafana
+  gather_facts: false
+  become: true
+
+  roles:
+    - grafana
